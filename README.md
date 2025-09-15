@@ -14,12 +14,18 @@ A text-based simulation for managing a virtual zoo. Track animals, staff, visito
 
 # Technologies
   Python 
+  
   Object-Oriented Programming
+  
   File Handling
+  
   Different modules for simulation
 
 # Potential Features
   AI integration
+  
     - AI staff
+    
     - DNN that learns complex patterns between animals.
+    
     - More to be determined...
