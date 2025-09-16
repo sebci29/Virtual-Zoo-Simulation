@@ -7,7 +7,7 @@ class Staff_Member():
         self.name = name
         self.role = role
 
-    def save_staff(self):
+    def save_staff(self, file_name):
         with open(file_name,"r+") as file:
             lines = file.readlines()
             for i,line in enumerate(lines):
@@ -18,7 +18,7 @@ class Staff_Member():
                         return print("Staff saved succesfully!")
                 except IndexError:
                     return print("ERROR: Invalid Staff Member")
-            lines.append(f"{self.name},{self.role}\n"")
+            lines.append(f"{self.name},{self.role}\n")
             file.seek(0)
             file.truncate()
             file.writelines(lines)
@@ -58,4 +58,5 @@ def load_staff(file_name):
             try:
                 staff_list.append(Staff_Member(split_line[0],split_line[1].strip()))
             except IndexError:
-                return print("ERROR: Invalid staff member")
+                print("ERROR: Invalid staff member")
+                continue
